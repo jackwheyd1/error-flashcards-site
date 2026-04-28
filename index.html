@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error Flashcards · Phase B Package</title>
+    <link rel="stylesheet" href="./design/tokens.css" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font: var(--text-body);
+        color: var(--color-ink);
+        background: var(--gradient-hero);
+      }
+      .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 48px;
+      }
+      .hero, .card {
+        background: rgba(255,255,255,0.82);
+        backdrop-filter: blur(14px);
+        border-radius: var(--radius-card-lg);
+        box-shadow: var(--shadow-card);
+      }
+      .hero {
+        padding: 32px;
+        display: grid;
+        gap: 24px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: var(--radius-pill);
+        background: #fff0da;
+        color: #a14e00;
+        font: var(--text-caption);
+      }
+      h1 { margin: 0; font: var(--text-display); }
+      p { margin: 0; color: var(--color-ink-soft); }
+      .grid {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        padding: 20px;
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font: var(--text-h3);
+      }
+      .badge {
+        display: inline-block;
+        margin-bottom: 12px;
+        padding: 6px 10px;
+        border-radius: var(--radius-pill);
+        background: var(--color-brand-warm);
+        font: var(--text-caption);
+      }
+      ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+      li + li { margin-top: 6px; }
+      .links {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+      a.tile {
+        text-decoration: none;
+        color: inherit;
+        background: white;
+        border-radius: var(--radius-card-sm);
+        padding: 16px 18px;
+        box-shadow: var(--shadow-card);
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+      a.tile:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-float);
+      }
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .pill {
+        padding: 8px 12px;
+        border-radius: var(--radius-pill);
+        background: #fff;
+        font: var(--text-caption);
+        box-shadow: inset 0 0 0 1px rgba(26, 26, 26, 0.08);
+      }
+      @media (max-width: 640px) {
+        .wrap { width: min(100% - 20px, 1120px); padding-top: 20px; }
+        .hero { padding: 22px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div class="eyebrow">Phase B · PRD + Flow + Tracking + UI + Store Package</div>
+        <div>
+          <h1>Error Flashcards</h1>
+          <p>A flashcard system that turns mistakes into spaced review, weakness analysis, and a reusable product package.</p>
+        </div>
+        <div class="pill-row">
+          <span class="pill">Audience: students and exam takers</span>
+          <span class="pill">Core feature: photo-to-card import</span>
+          <span class="pill">Retention loop: review cadence</span>
+          <span class="pill">Business model: one-time purchase</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span class="badge">Product Definition</span>
+          <h2>Why users stay</h2>
+          <p>The value is not storage. It is knowing what to review today and seeing weak spots improve over time.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Experience Arc</span>
+          <h2>First Key Action</h2>
+          <p>The first successful import and card generation is the starting point for retention, monetization, and sharing.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Visual System</span>
+          <h2>Reference Translation</h2>
+          <p>Warm orange and cream create encouragement, while soft gray-blue keeps the interface calm instead of cold or oppressive.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Phase C Inputs</span>
+          <h2>Ready to Use</h2>
+          <p>Docs, flows, events, store copy, and design tokens are already split out and ready for implementation.</p>
+        </article>
+      </section>
+
+      <section class="links">
+        <a class="tile" href="./prototype.html">Phase C Interactive Prototype</a>
+        <a class="tile" href="./privacy-policy.html">Privacy Policy</a>
+        <a class="tile" href="./support.html">Support</a>
+        <a class="tile" href="./docs/01-%E4%B8%80%E9%A1%B5%E5%BC%8FPRD.md">01 One-page PRD</a>
+        <a class="tile" href="./docs/02-%E7%94%A8%E6%88%B7%E6%B5%81%E7%A8%8B%E5%9B%BE.md">02 User Flow</a>
+        <a class="tile" href="./docs/03-%E5%9F%8B%E7%82%B9%E8%A1%A8.csv">03 Analytics Events</a>
+        <a class="tile" href="./docs/04-UI%E8%A7%84%E8%8C%83.md">04 UI Spec</a>
+        <a class="tile" href="./docs/05-App%E5%95%86%E5%BA%97%E5%8C%85%E8%A3%85.md">05 App Store Package</a>
+        <a class="tile" href="./design/tokens.css">Design Tokens</a>
+      </section>
+    </main>
+  </body>
+</html>
